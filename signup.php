@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Login</title>
+    <title>Signup</title>
 
     
     
@@ -106,8 +106,12 @@
 
   <form method="post">
     
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Create account</h1>
 
+    <div class="form-floating">
+      <input name="username" type="text" class="form-control mb-2" id="floatingInput" placeholder="Username">
+      <label for="floatingInput">Username</label>
+    </div>
     <div class="form-floating">
       <input name="email" type="email" class="form-control mb-2" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email</label>
@@ -116,15 +120,14 @@
       <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
-
-    <div class="my-2">Dont have an account? <a href="signup.php">Signup here</a></div>
-    <div class="form-check text-start my-3">
-      <input name="remember" class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
+    <div class="form-floating">
+      <input name="confirm_password "  type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
+      <label for="floatingPassword">Confirm Password</label>
     </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+
+    <div class="my-2">Alredy have an account? <a href="login.php">Login here</a></div>
+    
+    <button class="btn btn-primary w-100 py-2" type="submit"> Create </button>
     
   </form>
 </main>
