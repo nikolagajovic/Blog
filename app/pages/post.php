@@ -1,6 +1,7 @@
 
 <?php include '../app/pages/includes/header.php'; ?>
 
+
 <div class="mx-auto col-md-10">
     <h3 class="mx-4">Blog</h3>
 
@@ -20,16 +21,19 @@
           if(!empty($row))
           { ?>
             
-            <div class="col-md-12">
+            <div class="col-md-6">
             <div class="g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
-              <div class="col-12 d-lg-block">
-                <img class="bd-placeholder-img w-100" width="100%" style="object-fit:cover;" src="<?=get_image($row['image'])?>">
-              </div>
-              <div class="col p-4 d-flex flex-column position-static">
+            <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary"><?=esc($row['category'] ?? 'Unknown')?></strong>
                 <h3 class="mb-0"><?=esc($row['title'])?></h3>
                 <div class="mb-1 text-muted"><?=date("jS M, Y",strtotime($row['date']))?></div>
                 <p class="card-text mb-auto"><?=nl2br(add_root_to_images($row['content']))?></p>
+              <div class="col-12 d-lg-block">
+                <img class="bd-placeholder-img w-100 my-4" width="100%"  style="object-fit:cover;" src="<?=get_image($row['image'])?>">
+              </div>
+             
+
+                <a class="btn btn-sm btn-outline-secondary" style="width: 20%;" href="<?= ROOT ?>/Blog" class="nav-link p-0 text-muted">Back</a>
               </div>
 
             </div>
@@ -41,7 +45,7 @@
           }
 
         ?>
-
+        
       </div>
 
 

@@ -117,6 +117,9 @@
       <label>
         <input name="remember" type="checkbox" value="1"> Remember me
       </label>
+
+      <div class="my-2">Dont have an account? <a href="<?=ROOT?>/signup">Signup here</a></div>
+
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; <?= date("Y")?></p>
