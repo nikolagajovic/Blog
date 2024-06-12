@@ -28,6 +28,7 @@
 
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <h2 class="blog_name" style="margin-right: 20px;">Our Blog</h2>
           <li><a href="<?= ROOT ?>" class="nav-link px-2 <?= $url[0] == 'home' ? 'link-primary' : 'link-dark' ?>">Home</a></li>
           <li><a href="<?= ROOT ?>/blog" class="nav-link px-2  <?= $url[0] == 'blog' ? 'link-primary' : 'link-dark' ?>">Blog</a></li>
           <li>
@@ -35,6 +36,7 @@
               <a href="#" class="d-block <?= $url[0] == 'category' ? 'link-primary' : 'link-dark' ?> text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 Category
               </a>
+              
               <ul class="dropdown-menu text-small">
 
                 <?php
@@ -53,7 +55,13 @@
               </ul>
             </span>
           </li>
+
+          
         </ul>
+        
+        
+       
+       
 
         <form action="<?= ROOT ?>/search" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <div class="input-group ">
@@ -63,7 +71,7 @@
         </form>
 
         <?php if (!logged_in()) : ?>
-          <a class="btn btn-sm btn-outline-secondary" href="<?= ROOT ?>/login" class="nav-link p-0 text-muted">Sign up</a>
+          <a class="btn btn-sm btn-outline-secondary" href="<?= ROOT ?>/login" class="nav-link p-0 text-muted">Sign in</a>
         <?php endif; ?>
 
         <?php if (logged_in()) : ?>
